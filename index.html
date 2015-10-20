@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Conversion de datos</title>
+  </head>
+  <body>
+    <h1>Conversion a traves de JavaScript</h1>
+    <form action="">
+      <label for="Grados Celsius">Grados Celsius</label><br/>
+      <input id="celsius" type="number" placeholder="Celsius">
+      <button onclick="convertir();">=</button>
+      <input id="farenheit" type="text" name="farenheit" placeholder="Resultado" readonly="readonly">
+    </form>
+    <script>
+
+    var toFarenheit;
+
+    toFarenheit = document.getElementById("celsius").value;
+
+    console.log(toFarenheit);
+
+      function convertir(){
+
+        var toFarenheit;
+
+        toFarenheit = document.getElementById("celsius").value;
+
+        console.log("toFarenheit");
+
+      };
+
+
+    </script>
+
+  </body>
+</html>
