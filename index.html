@@ -9,24 +9,30 @@
     <form action="">
       <label for="Grados Celsius">Grados Celsius</label><br/>
       <input id="celsius" type="number" placeholder="Celsius">
+      <button id="tofarenheit"onclick="convertir();">=</button>
+      <input id="restf" type="text" name="tofarenheit" placeholder="Resultado" readonly="readonly"><br/>
+      <label for="Grados Farenheit">Grados Farenheit</label><br/>
+      <input id="farenheit" type="number" placeholder="Farenheit">
       <button onclick="convertir();">=</button>
-      <input id="farenheit" type="text" name="farenheit" placeholder="Resultado" readonly="readonly">
+      <input id="tocelsius" type="text" name="tocelsius" placeholder="Resultado" readonly="readonly">
     </form>
     <script>
 
-    var toFarenheit;
-
-    toFarenheit = document.getElementById("celsius").value;
-
-    console.log(toFarenheit);
-
       function convertir(){
 
-        var toFarenheit;
+        var toFarenheit = document.getElementById("celsius").value;
+        var toCelsius = document.getElementById("farenheit").value;
 
-        toFarenheit = document.getElementById("celsius").value;
 
-        console.log("toFarenheit");
+        if("tofarenheit"){
+          toFarenheit = toFarenheit * 9 / 5 + 32;
+          document.getElementById("tofarenheit").value = Math.round(toFarenheit);
+        }
+        if("tocelsius"){
+          toFarenheit = (toFarenheit -32) * 5 / 9;
+          document.getElementById("tocelsius").value = Math.round(toCelsius);
+        }
+
 
       };
 
