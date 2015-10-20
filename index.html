@@ -9,33 +9,32 @@
     <form action="">
       <label for="Grados Celsius">Grados Celsius</label><br/>
       <input id="celsius" type="number" placeholder="Celsius">
-      <button id="tofarenheit"onclick="convertir();">=</button>
-      <input id="restf" type="text" name="tofarenheit" placeholder="Resultado" readonly="readonly"><br/>
+      <input id="tofarenheit"type="button" value="Convertir" onclick="convertir();">
+      <input id="resulttofarenheit" type="text" placeholder="Resultado" readonly="readonly"><br/>
       <label for="Grados Farenheit">Grados Farenheit</label><br/>
       <input id="farenheit" type="number" placeholder="Farenheit">
-      <button onclick="convertir();">=</button>
-      <input id="tocelsius" type="text" name="tocelsius" placeholder="Resultado" readonly="readonly">
+      <input id="tocelsius"type="button" value="Convertir" onclick="convertir();">
+      <input id="resulttocelsius" type="text" placeholder="Resultado" readonly="readonly"><br/>
     </form>
     <script>
+
 
       function convertir(){
 
         var toFarenheit = document.getElementById("celsius").value;
         var toCelsius = document.getElementById("farenheit").value;
 
-
         if("tofarenheit"){
           toFarenheit = toFarenheit * 9 / 5 + 32;
-          document.getElementById("tofarenheit").value = Math.round(toFarenheit);
+          console.log(toFarenheit);
+          document.getElementById("resulttofarenheit").value = toFarenheit;
         }
         if("tocelsius"){
-          toFarenheit = (toFarenheit -32) * 5 / 9;
-          document.getElementById("tocelsius").value = Math.round(toCelsius);
+          toCelsius = (toCelsius -32) * 5 / 9;
+          document.getElementById("resulttocelsius").value = toCelsius;
         }
 
-
       };
-
 
     </script>
 
